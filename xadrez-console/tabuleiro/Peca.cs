@@ -2,18 +2,25 @@
 {
     class Peca
     {
+        private Tabuleiro tabuleiro;
+
         public Posicao posicao { get; set; }
         public Cor cor { get; protected set; }
         public int qtdMovimentos { get; protected set; }
         public Tabuleiro tab { get; protected set; }
 
-        public Peca(Posicao posicao, Cor cor, Tabuleiro tab)
+        public Peca(Cor cor, Tabuleiro tab)
         {
-            this.posicao = posicao;
+            this.posicao = null;
             this.cor = cor;
             this.tab = tab;
             this.qtdMovimentos = 0;
         }
 
+        public Peca(Tabuleiro tabuleiro, Cor cor)
+        {
+            this.tabuleiro = tabuleiro;
+            this.cor = cor;
+        }
     }
 }
