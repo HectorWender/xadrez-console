@@ -1,6 +1,6 @@
 ﻿namespace tabuleiro
 {
-    class Peca
+    abstract class Peca
     {
         private Tabuleiro tabuleiro;
 
@@ -19,5 +19,6 @@
 
         public void incrementarQtdMovimentos() { qtdMovimentos++; }
 
+        public abstract bool[,] movimentosPossiveis();
     }
 }
