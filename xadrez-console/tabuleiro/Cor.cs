@@ -4,10 +4,6 @@
     {
         Branco,
         Preto,
-        Amarelo,
-        Azul, 
-        Vermelho,
-        Verde,
-        Laranja
+        Amarelo
     }
 }
