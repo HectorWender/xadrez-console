@@ -35,6 +35,12 @@
             return false;
         }
 
+        public bool podeMover(Posicao pos)
+        {
+            Peca p = tab.peca(pos);
+            return p == null || p.cor != cor;
+        }
+
         public bool movimentoPossivel(Posicao posicao)
         {
             return movimentosPossiveis()[posicao.linha, posicao.coluna];

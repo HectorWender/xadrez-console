@@ -201,12 +201,34 @@ namespace xadrez
 
         private void colocarPecas()
         {
-            colocarNovaPeca('c', 1, new Torre(tabuleiro, Cor.Branco));
-            colocarNovaPeca('h', 7, new Torre(tabuleiro, Cor.Branco));
-            colocarNovaPeca('f', 2, new Rei(tabuleiro, Cor.Branco));
+            char[] aux = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h' };
+            //Brancas
+            colocarNovaPeca('a', 1, new Torre(tabuleiro, Cor.Branco));
+            colocarNovaPeca('b', 1, new Cavalo(tabuleiro, Cor.Branco));
+            colocarNovaPeca('c', 1, new Bispo(tabuleiro, Cor.Branco));
+            colocarNovaPeca('d', 1, new Rainha(tabuleiro, Cor.Branco));
+            colocarNovaPeca('e', 1, new Rei(tabuleiro, Cor.Branco));
+            colocarNovaPeca('f', 1, new Bispo(tabuleiro, Cor.Branco));
+            colocarNovaPeca('g', 1, new Cavalo(tabuleiro, Cor.Branco));
+            colocarNovaPeca('h', 1, new Torre(tabuleiro, Cor.Branco));
 
-            colocarNovaPeca('b', 8, new Torre(tabuleiro, Cor.Preto));
-            colocarNovaPeca('a', 8, new Rei(tabuleiro, Cor.Preto));
+            foreach(char item in aux) {
+                colocarNovaPeca(item, 2, new Peao(tabuleiro, Cor.Branco));
+            }
+
+            //Pretas
+            colocarNovaPeca('a', 8, new Torre(tabuleiro, Cor.Preto));
+            colocarNovaPeca('b', 8, new Cavalo(tabuleiro, Cor.Preto));
+            colocarNovaPeca('c', 8, new Bispo(tabuleiro, Cor.Preto));
+            colocarNovaPeca('d', 8, new Rainha(tabuleiro, Cor.Preto));
+            colocarNovaPeca('e', 8, new Rei(tabuleiro, Cor.Preto));
+            colocarNovaPeca('f', 8, new Bispo(tabuleiro, Cor.Preto));
+            colocarNovaPeca('g', 8, new Cavalo(tabuleiro, Cor.Preto));
+            colocarNovaPeca('h', 8, new Torre(tabuleiro, Cor.Preto));
+
+            foreach(char item in aux) {
+                colocarNovaPeca(item, 7, new Peao(tabuleiro, Cor.Preto));
+            }
         }
 
     }
